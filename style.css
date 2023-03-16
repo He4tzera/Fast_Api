@@ -1,0 +1,87 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fundo{
+  height: 100vh;
+  background-image: url('./img/estrada.webp') ;
+  background-position: right;
+  background-size: cover;
+  filter: blur(3px);
+  position: relative;
+
+}
+
+
+form{
+  top: 0;
+  right: 35%;
+  margin-top: 150px;
+  background-color: rgba(54, 54, 54, 0.6);
+  width: 500px;
+  height: 300px;
+  border-radius: 12px;
+  position: absolute;
+}
+
+form h1{
+  color: white;
+  font-family: 'Trebuchet MS',sans-serif;
+  margin: 15px 0 25px 25px;
+}
+
+form label{
+  display: flex;
+  font-family: 'Trebuchet MS',Arial, sans-serif;
+  color: white;
+  margin: 8px;
+}
+
+form input{
+  border: none;
+  height: 1.4rem;
+  padding-left: 3px;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+form input:focus{
+  outline: 0;
+  border: 1px solid rgb(134, 51, 56);;
+}
+
+form button{
+  float: right;
+  margin: 4px 18px;
+  background-color: ;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+form button:hover{
+  background-color: rgb(134, 51, 56);
+  color: white;
+}
+
+form span{
+  color: white;
+  display: block;
+  margin: 12px 0 0 8px;
+  position: relative;
+}
+
+form span::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: -3px;
+
+}
