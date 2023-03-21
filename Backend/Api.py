@@ -1,13 +1,11 @@
 import requests
-import json
+from Backend.integracao import *
 from integracao import *
-
-def consulta():
-    global dados_Logradouro, dados_Bairro, dados_Localidade
+import json
+def consulta(cep):
     try:
-        #url para consulta do Cep
-        url_Api = f'https://viacep.com.br/ws/{cep_usu()}/json/'
-        print(cep_usu())
+        # url para consulta do Cep
+        url_Api = f'https://viacep.com.br/ws/{cep}/json/'
         requisicao = requests.get(url_Api)
         dados_Json = requisicao.content
         dados = json.loads(dados_Json)
@@ -16,7 +14,7 @@ def consulta():
         dados_Bairro = dados["bairro"]
         dados_Localidade = dados['localidade']
         return dados_Logradouro, dados_Bairro, dados_Localidade
-    #Except para caso o usuario insira um cep invalido
+    # Except para caso o usuario insira um cep invalido
     except:
         print("Informe um CEP valido")
         return "Informe um CEP valido"
